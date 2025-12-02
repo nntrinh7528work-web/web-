@@ -1,12 +1,13 @@
 import React from 'react';
-import { Product } from '../types';
+import { Product, TranslationDictionary } from '../types';
 
 interface ProductDetailProps {
   product: Product | null;
   onClose: () => void;
+  t: TranslationDictionary['detail'];
 }
 
-const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
+const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose, t }) => {
   if (!product) return null;
 
   // Helper to create human-readable headers from keys
@@ -69,7 +70,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
                             <svg className="w-5 h-5 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            Ứng Dụng
+                            {t.applications}
                          </h4>
                          <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
                              {product.applications.map((app, idx) => (
@@ -85,7 +86,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
                                 <svg className="w-5 h-5 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                                 </svg>
-                                Đặc Tính
+                                {t.properties}
                             </h4>
                             <ul className="list-disc list-inside text-sm text-gray-800 space-y-1">
                                 {product.properties.map((prop, idx) => (
@@ -99,14 +100,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
                 {/* Packaging */}
                 {product.packaging && (
                     <div className="mt-4 p-3 bg-white rounded-lg border border-gray-200 text-sm text-gray-800">
-                        <span className="font-semibold text-black">Quy cách đóng gói: </span> {product.packaging}
+                        <span className="font-semibold text-black">{t.packaging_label} </span> {product.packaging}
                     </div>
                 )}
 
                 {/* Specifications Table */}
                 {product.specifications.length > 0 && (
                     <div className="mt-8">
-                        <h4 className="font-bold text-black mb-4">Thông Số Kỹ Thuật (Specifications)</h4>
+                        <h4 className="font-bold text-black mb-4">{t.specifications}</h4>
                         <div className="overflow-x-auto border rounded-lg">
                             <table className="min-w-full divide-y divide-gray-200">
                                 <thead className="bg-gray-50">
@@ -147,7 +148,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
                 className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary text-base font-medium text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary sm:ml-3 sm:w-auto sm:text-sm"
                 onClick={onClose}
             >
-              Đóng
+              {t.close}
             </button>
              <button
                 type="button"
@@ -157,7 +158,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
                    window.location.hash = "contact";
                 }}
             >
-              Liên Hệ Mua Hàng
+              {t.contact_sales}
             </button>
           </div>
         </div>

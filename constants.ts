@@ -1,6 +1,216 @@
-import { AppData } from './types';
+import { AppData, TranslationDictionary } from './types';
 
-export const COMPANY_DATA: AppData = {
+export const TRANSLATIONS: { vi: TranslationDictionary; en: TranslationDictionary } = {
+  vi: {
+    nav: {
+      home: 'Trang Chủ',
+      products: 'Sản Phẩm',
+      contact: 'Liên Hệ',
+      askAI: 'Hỏi AI',
+    },
+    hero: {
+      title_prefix: 'Giải Pháp Hóa Chất',
+      title_highlight: 'Từ Tài Nguyên Việt',
+      cta_products: 'Xem Sản Phẩm',
+      cta_contact: 'Liên Hệ Ngay',
+      hotline_title: 'Hotline Tư Vấn Trực Tiếp',
+      rep_title: 'Đại diện kinh doanh',
+    },
+    home: {
+      about_title: 'Về Chúng Tôi',
+      factory_scale: 'Quy Mô Nhà Máy',
+      factory_desc_prefix: 'Thành lập từ năm',
+      factory_desc_capacity: 'với công suất',
+      cooperation: 'Hợp Tác Phát Triển',
+      view_all_products: 'Xem toàn bộ danh mục sản phẩm',
+    },
+    products: {
+      title: 'Danh Mục Sản Phẩm',
+      subtitle: 'Các sản phẩm nhựa thông biến tính và tinh dầu chất lượng cao.',
+      search_placeholder: 'Tìm kiếm sản phẩm...',
+      all_categories: 'Tất cả',
+      no_results: 'Không tìm thấy sản phẩm phù hợp.',
+      view_detail: 'Xem Chi Tiết & Thông Số',
+    },
+    detail: {
+      applications: 'Ứng Dụng',
+      properties: 'Đặc Tính',
+      packaging: 'Quy cách đóng gói',
+      packaging_label: 'Quy cách đóng gói:',
+      specifications: 'Thông Số Kỹ Thuật (Specifications)',
+      close: 'Đóng',
+      contact_sales: 'Liên Hệ Mua Hàng',
+    },
+    contact: {
+      title: 'Liên Hệ Với Chúng Tôi',
+      subtitle: 'Hợp tác cùng phát triển - Vươn tầm quốc tế',
+      info_title: 'Thông Tin Liên Hệ',
+      factory_address: 'Địa chỉ nhà máy:',
+      contact_person: 'Người liên hệ:',
+      tax_id: 'Mã số thuế:',
+      phone: 'Điện thoại:',
+      fax: 'Fax:',
+      form_title: 'Gửi Thông Tin Liên Hệ',
+      form_name: 'Họ và tên',
+      form_email: 'Email',
+      form_phone: 'Số điện thoại',
+      form_message: 'Nội dung cần tư vấn',
+      form_submit: 'Gửi Liên Hệ',
+      form_success: 'Cảm ơn Quý khách đã liên hệ. Chúng tôi sẽ phản hồi trong thời gian sớm nhất!',
+    },
+    chat: {
+      header: 'Hỗ Trợ Trực Tuyến',
+      placeholder: 'Nhập câu hỏi...',
+      disclaimer: 'AI có thể mắc lỗi. Vui lòng kiểm tra lại thông tin quan trọng.',
+      welcome: 'Xin chào! Tôi là trợ lý ảo của Tùng Việt Chemical. Tôi có thể giúp gì cho bạn về các sản phẩm nhựa thông và hóa chất?',
+    },
+    footer: {
+      rights: 'Bảo lưu mọi quyền.',
+      privacy: 'Chính Sách Bảo Mật',
+      terms: 'Điều Khoản Dịch Vụ',
+    }
+  },
+  en: {
+    nav: {
+      home: 'Home',
+      products: 'Products',
+      contact: 'Contact',
+      askAI: 'Ask AI',
+    },
+    hero: {
+      title_prefix: 'Chemical Solutions',
+      title_highlight: 'From Vietnamese Resources',
+      cta_products: 'View Products',
+      cta_contact: 'Contact Now',
+      hotline_title: 'Direct Consultation Hotline',
+      rep_title: 'Sales Representative',
+    },
+    home: {
+      about_title: 'About Us',
+      factory_scale: 'Factory Scale',
+      factory_desc_prefix: 'Established in',
+      factory_desc_capacity: 'with a capacity of',
+      cooperation: 'Cooperation & Development',
+      view_all_products: 'View full product catalog',
+    },
+    products: {
+      title: 'Product Catalog',
+      subtitle: 'High-quality modified rosin resins and essential oils.',
+      search_placeholder: 'Search products...',
+      all_categories: 'All',
+      no_results: 'No matching products found.',
+      view_detail: 'View Details & Specs',
+    },
+    detail: {
+      applications: 'Applications',
+      properties: 'Properties',
+      packaging: 'Packaging',
+      packaging_label: 'Packaging:',
+      specifications: 'Specifications',
+      close: 'Close',
+      contact_sales: 'Contact Sales',
+    },
+    contact: {
+      title: 'Contact Us',
+      subtitle: 'Cooperate to develop - Reach international standards',
+      info_title: 'Contact Information',
+      factory_address: 'Factory Address:',
+      contact_person: 'Contact Person:',
+      tax_id: 'Tax ID:',
+      phone: 'Phone:',
+      fax: 'Fax:',
+      form_title: 'Send Contact Info',
+      form_name: 'Full Name',
+      form_email: 'Email',
+      form_phone: 'Phone Number',
+      form_message: 'Message / Inquiry',
+      form_submit: 'Send Message',
+      form_success: 'Thank you for contacting us. We will respond as soon as possible!',
+    },
+    chat: {
+      header: 'Online Support',
+      placeholder: 'Type your question...',
+      disclaimer: 'AI may make mistakes. Please verify important information.',
+      welcome: 'Hello! I am the AI assistant of Tung Viet Chemical. How can I help you with our rosin products and chemicals?',
+    },
+    footer: {
+        rights: 'All rights reserved.',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service',
+    }
+  },
+};
+
+export const LEGAL_CONTENT = {
+    vi: {
+        privacy: `
+            <h3 class="text-xl font-bold mb-4">1. Thu thập thông tin</h3>
+            <p class="mb-4">Chúng tôi thu thập thông tin cá nhân mà bạn cung cấp trực tiếp cho chúng tôi khi bạn điền vào form liên hệ, bao gồm tên, địa chỉ email, số điện thoại và nội dung tin nhắn.</p>
+            
+            <h3 class="text-xl font-bold mb-4">2. Sử dụng thông tin</h3>
+            <p class="mb-4">Thông tin của bạn được sử dụng để:</p>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li>Phản hồi các yêu cầu, thắc mắc về sản phẩm và dịch vụ.</li>
+                <li>Gửi thông tin báo giá và tư vấn kỹ thuật.</li>
+                <li>Cải thiện chất lượng dịch vụ khách hàng.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-4">3. Bảo mật thông tin</h3>
+            <p class="mb-4">Chúng tôi cam kết bảo mật thông tin cá nhân của bạn. Chúng tôi không bán, trao đổi, hoặc chuyển giao thông tin của bạn cho bên thứ ba trừ khi có sự đồng ý của bạn hoặc theo yêu cầu của pháp luật.</p>
+
+            <h3 class="text-xl font-bold mb-4">4. Cookie</h3>
+            <p class="mb-4">Website này sử dụng Local Storage để lưu trữ tùy chọn ngôn ngữ của bạn nhằm mang lại trải nghiệm tốt hơn. Chúng tôi không sử dụng cookie để theo dõi hành vi người dùng cho mục đích quảng cáo.</p>
+        `,
+        terms: `
+            <h3 class="text-xl font-bold mb-4">1. Chấp nhận các điều khoản</h3>
+            <p class="mb-4">Bằng việc truy cập và sử dụng website của Công Ty Cổ Phần Hóa Phẩm Tùng Việt, bạn đồng ý tuân thủ các điều khoản và điều kiện này.</p>
+
+            <h3 class="text-xl font-bold mb-4">2. Thông tin sản phẩm</h3>
+            <p class="mb-4">Mọi thông tin về thông số kỹ thuật, đặc tính và ứng dụng của sản phẩm trên website chỉ mang tính chất tham khảo. Người sử dụng nên liên hệ trực tiếp để được tư vấn kỹ thuật chính xác nhất cho từng ứng dụng cụ thể. Chúng tôi không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc sử dụng thông tin trên website mà không qua tư vấn.</p>
+
+            <h3 class="text-xl font-bold mb-4">3. Sở hữu trí tuệ</h3>
+            <p class="mb-4">Tất cả nội dung, hình ảnh, logo và tài liệu trên website này là tài sản của Công Ty Cổ Phần Hóa Phẩm Tùng Việt. Nghiêm cấm mọi hành vi sao chép, sửa đổi hoặc phân phối mà không có sự cho phép bằng văn bản.</p>
+
+            <h3 class="text-xl font-bold mb-4">4. Thay đổi điều khoản</h3>
+            <p class="mb-4">Chúng tôi có quyền thay đổi, chỉnh sửa các điều khoản này bất cứ lúc nào mà không cần báo trước. Việc bạn tiếp tục sử dụng website sau khi có các thay đổi đồng nghĩa với việc bạn chấp nhận các thay đổi đó.</p>
+        `
+    },
+    en: {
+        privacy: `
+            <h3 class="text-xl font-bold mb-4">1. Information Collection</h3>
+            <p class="mb-4">We collect personal information that you provide directly to us when you fill out the contact form, including your name, email address, phone number, and message content.</p>
+            
+            <h3 class="text-xl font-bold mb-4">2. Use of Information</h3>
+            <p class="mb-4">Your information is used to:</p>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li>Respond to inquiries regarding products and services.</li>
+                <li>Send quotations and technical consultations.</li>
+                <li>Improve customer service quality.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold mb-4">3. Information Security</h3>
+            <p class="mb-4">We are committed to protecting your personal information. We do not sell, trade, or transfer your information to third parties unless we have your consent or are required by law.</p>
+
+            <h3 class="text-xl font-bold mb-4">4. Cookies</h3>
+            <p class="mb-4">This website uses Local Storage to save your language preference to provide a better experience. We do not use cookies to track user behavior for advertising purposes.</p>
+        `,
+        terms: `
+            <h3 class="text-xl font-bold mb-4">1. Acceptance of Terms</h3>
+            <p class="mb-4">By accessing and using the website of Tung Viet Chemical Joint Stock Company, you agree to comply with these terms and conditions.</p>
+
+            <h3 class="text-xl font-bold mb-4">2. Product Information</h3>
+            <p class="mb-4">All information regarding technical specifications, properties, and applications of products on the website is for reference only. Users should contact us directly for the most accurate technical advice for specific applications. We are not liable for any damages arising from the use of information on the website without consultation.</p>
+
+            <h3 class="text-xl font-bold mb-4">3. Intellectual Property</h3>
+            <p class="mb-4">All content, images, logos, and materials on this website are the property of Tung Viet Chemical Joint Stock Company. Any copying, modification, or distribution without written permission is strictly prohibited.</p>
+
+            <h3 class="text-xl font-bold mb-4">4. Changes to Terms</h3>
+            <p class="mb-4">We reserve the right to modify these terms at any time without prior notice. Your continued use of the website following any changes constitutes your acceptance of such changes.</p>
+        `
+    }
+}
+
+export const COMPANY_DATA_VI: AppData = {
   "company_info": {
     "name": "Công Ty Cổ Phần Hóa Phẩm Tùng Việt",
     "established": "2007",
@@ -272,6 +482,189 @@ export const COMPANY_DATA: AppData = {
         { "code": "PO65", "alcohol_content_min": "65%", "distillation_range": "175-225" },
         { "code": "PO85", "alcohol_content_min": "85%", "distillation_range": "190-225" }
       ]
+    }
+  ]
+};
+
+export const COMPANY_DATA_EN: AppData = {
+  "company_info": {
+    "name": "Tung Viet Chemical Joint Stock Company",
+    "established": "2007",
+    "factory_established": "2011",
+    "capacity": "20,000 tons/year",
+    "description": "Specializing in chemical production and deep processing of gum rosin using domestic raw materials. Committed to good prices and stable quality.",
+    "contact": {
+      "contact_person": "Ms. Le Thi Minh Thu",
+      "address": "Street No. 7, Nhon Trach II - Nhon Phu Industrial Park, Hiep Phuoc Town, Nhon Trach District, Dong Nai Province.",
+      "tax_id": "3602483670",
+      "phone": "84. 28. 3862 0025",
+      "fax": "84. 28. 3862 0027",
+      "hotlines": [
+        { "number": "0907 776 779", "email": "sales@tungviet.com" },
+        { "number": "0902 422 457", "email": "info@tungviet.com" }
+      ],
+      "website": "www.tungviet.com"
+    },
+    "cooperation_areas": [
+      "Ideas for chemical production",
+      "Research and application deployment",
+      "Products using Vietnamese raw materials"
+    ]
+  },
+  "products": [
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "PHENAL RESIN",
+      "description": "Light yellow transparent solid, modified from gum rosin to increase adhesion.",
+      "properties": [
+        "Soluble in aromatic solvents, esters, ketones, petroleum products",
+        "Light color, anti-yellowing, heat resistant"
+      ],
+      "applications": [
+        "Printing ink (replacing damar gum)",
+        "Adhesives (compatible with EVA, SBS, SIS, SBR, CR, NR)"
+      ],
+      "packaging": "25kg/bag (2 layers: plastic - paper); 40 bags/pallet. Shelf life 2 years.",
+      "specifications": COMPANY_DATA_VI.products[0].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN MODIFIED MALEIC RESIN",
+      "description": "Light yellow transparent solid obtained from esterification of maleic rosin and polyhydric alcohol.",
+      "properties": [
+        "Soluble in esters, non-alcoholic solvents, turpentine oil",
+        "Insoluble in alcohol, partially soluble in petroleum",
+        "Light color, yellowing resistance, heat resistance, good adhesion"
+      ],
+      "applications": [
+        "Increase hardness and gloss in polyester paint, nitrocellulose paint, PU paint, varnish",
+        "Production of phenolic paints",
+        "Thermoplastic road marking paint"
+      ],
+      "specifications": COMPANY_DATA_VI.products[1].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN MODIFIED MALEIC RESIN SOLUTION",
+      "description": "Solution of Maleic Resin (M1306 or M13035) with 65-70% solid content in solvent.",
+      "properties": [
+        "Density: 1.03-1.05 g/mL",
+        "Solvent: Toluene, Xylene or Butyl acetate"
+      ],
+      "applications": [
+        "Increase hardness and gloss in polyester paint, NC paint, PU paint, varnish",
+        "Production of phenolic paints"
+      ],
+      "packaging": "Steel drum 200 kg/drum",
+      "specifications": COMPANY_DATA_VI.products[2].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN ESTER GLYCEROL",
+      "description": "Light yellow transparent solid obtained from esterification of glycerine and gum rosin.",
+      "properties": [
+        "Soluble in esters, turpentine oil, non-polar solvents",
+        "Light color, yellowing resistance, heat resistance, high tack"
+      ],
+      "applications": [
+        "Road marking paint, adhesives, hot melt adhesives, thermoplastic paint",
+        "Printing ink, rubber"
+      ],
+      "specifications": COMPANY_DATA_VI.products[3].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN ESTER PENTAERYTHRITOL",
+      "description": "Light yellow transparent solid obtained from esterification of gum rosin and pentaerythritol.",
+      "properties": [
+        "Soluble in esters, turpentine oil, alcohol solvents",
+        "Light color, yellowing resistance, heat resistance, high tack"
+      ],
+      "applications": [
+        "Paint, printing ink, adhesives",
+        "Compatible with NC resin, alkyd, EVA, SIS, SBS, CR rubber"
+      ],
+      "packaging": "25kg/bag; 40 bags/pallet",
+      "specifications": COMPANY_DATA_VI.products[4].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN RESIN FOR ROAD MARKING PAINT",
+      "description": "Thermoplastic Road Marking Paint Resin. Light yellow solid, abrasion resistant, fast drying.",
+      "properties": [
+        "Good pressure resistance, abrasion resistance, anti-settling, fast drying",
+        "Good compatibility with petroleum resins and EVA"
+      ],
+      "applications": [
+        "Thermoplastic road marking paint"
+      ],
+      "specifications": COMPANY_DATA_VI.products[5].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN PAPER RESIN",
+      "description": "Yellow transparent solid, used for paper sizing.",
+      "applications": ["Production of glue (plastic film glue, paper glue), printing ink"],
+      "specifications": COMPANY_DATA_VI.products[6].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN MALEATE",
+      "description": "Adduct of rosin with maleic anhydride/fumaric acid.",
+      "applications": ["Paper size, printing ink, other synthesis"],
+      "specifications": COMPANY_DATA_VI.products[7].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN FUMARATE",
+      "description": "Adduct of rosin with fumaric acid/maleic anhydride.",
+      "applications": ["Paper size, printing ink"],
+      "specifications": COMPANY_DATA_VI.products[8].specifications
+    },
+    {
+      "category": "MODIFIED ROSIN RESIN",
+      "product_name": "ROSIN MODIFIED SOLUTION - RS130",
+      "description": "Modified Rosin Solution Reduced Acid Value.",
+      "applications": ["Marine paint (antifouling)"],
+      "specifications": COMPANY_DATA_VI.products[9].specifications
+    },
+    {
+      "category": "GUM ROSIN & ESSENTIAL OILS",
+      "product_name": "GUM ROSIN",
+      "description": "Distilled natural gum rosin. Natural origin.",
+      "applications": ["Hot melt adhesive, PSA, printing ink, paint, rubber"],
+      "specifications": COMPANY_DATA_VI.products[10].specifications
+    },
+    {
+      "category": "GUM ROSIN & ESSENTIAL OILS",
+      "product_name": "REFINED ROSIN",
+      "description": "Refined rosin, light color, decolorized and stabilized.",
+      "applications": ["Solvent adhesive, PSA, hot melt adhesive"],
+      "specifications": COMPANY_DATA_VI.products[11].specifications
+    },
+    {
+      "category": "GUM ROSIN & ESSENTIAL OILS",
+      "product_name": "DISPROPORTIONATED ROSIN",
+      "description": "Rosin with reduced abietic acid, light color, oxidation resistant.",
+      "applications": ["Emulsion adhesive, thermoplastic adhesive, printing ink, paint, synthetic rubber"],
+      "specifications": COMPANY_DATA_VI.products[12].specifications
+    },
+    {
+      "category": "GUM ROSIN & ESSENTIAL OILS",
+      "product_name": "GUM TURPENTINE OIL",
+      "description": "Colorless/light yellow liquid, distilled from pine resin.",
+      "applications": ["Pharmaceutical production, industrial solvent"],
+      "specifications": [
+        { "code": "GTO-80", "alpha_pinene_min": "80%", "acid_value_max": "2.0" },
+        { "code": "GTO-CN", "description": "Industrial Turpentine Oil", "acid_value_max": "2.0" }
+      ]
+    },
+    {
+      "category": "GUM ROSIN & ESSENTIAL OILS",
+      "product_name": "PINE OIL",
+      "description": "Product from pine essential oil, pleasant scent.",
+      "applications": ["Detergents, disinfectants, paint fragrance"],
+      "specifications": COMPANY_DATA_VI.products[14].specifications
     }
   ]
 };
